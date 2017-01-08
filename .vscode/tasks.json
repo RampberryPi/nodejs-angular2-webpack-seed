@@ -1,0 +1,29 @@
+// USE THIS FOR DIRECTLY USING TRANSCRIPT COMPILER INSTEAD OF WEBPACK 
+//{
+//     // See https://go.microsoft.com/fwlink/?LinkId=733558
+//     // for the documentation about the tasks.json format
+//     "version": "0.1.0",
+//     "command": "${workspaceRoot}/client/node_modules/.bin/tsc",
+//     "isShellCommand": true,
+//     "args": [
+//         "-p",
+//         "${workspaceRoot}/client/src/ts-scripts"
+//     ],
+//     "showOutput": "silent",
+//     "problemMatcher": "$tsc"
+// }
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "0.1.0",
+    "command": "${workspaceRoot}/client/node_modules/.bin/webpack",
+    "options": {
+        "cwd": "${workspaceRoot}/client/src/ts-scripts"
+    },
+    "isShellCommand": true,
+    "args": [
+        // "--watch"
+    ],
+    "showOutput": "always"
+    // "problemMatcher": "$tsc"
+}

@@ -1,0 +1,6 @@
+/server/node_modules
+/client/node_modules
+/client/view/js/dist
+/server/dist
+/client/dist
+/out
