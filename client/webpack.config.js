@@ -3,7 +3,7 @@ var path = require('path');
 var webpackMerge = require('webpack-merge');
 
 //pack the index.html using the webpack html plugin
-var HtmlPack = require('html-webpack-plugin'); 
+var HtmlPack = require('html-webpack-plugin');
 
 // Webpack Config
 var webpackConfig = {
@@ -12,7 +12,7 @@ var webpackConfig = {
   },
 
   output: {
-    publicPath: '',
+    publicPath: '/view',
     path: path.resolve(__dirname, './dist'),
   },
 
@@ -25,6 +25,9 @@ var webpackConfig = {
         // your Angular Async Route paths relative to this root directory
       }
     ),
+    new HtmlPack({
+      template: './src/index.html'
+    })
   ],
 
   module: {
@@ -80,10 +83,7 @@ var defaultConfig = {
     Buffer: false,
     clearImmediate: false,
     setImmediate: false
-  },
-  plugins: [new HtmlPack({
-    template: './src/index.html'
-  })]
+  }
 };
 
 

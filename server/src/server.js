@@ -51,12 +51,12 @@ class Server {
 
         console.log("CWD : " + __dirname);
 
-        this.app.use('/view', express.static('C:/Ramp/Projects/RapidDocketUI/client/view'));
+        this.app.use('/view', express.static('../client/dist'));
         this.app.use('/', require('./routes'));
         this.app.use('*', function (req, res) {
             console.log("Wildcard access path : [" + req.path + "]");
             //TODO : uncomment later.
-            //res.redirect('/view');
+            res.redirect('/view');
         });
 
         // If no route is matched by now, it must be a 404
